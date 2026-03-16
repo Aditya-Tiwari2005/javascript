@@ -25,10 +25,34 @@
     // }
     // attachEvent()
     //jQuery - on
-    document.getElementById('owl').addEventListener('click',function(e){
-        alert('owl')
-        console.log(e)
-    },false)                                                                           
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     alert('owl')
+    //     console.log(e)
+    // },false)
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("clicked inside the ul")
+    // },false)
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("Owl clicked ")
+    //     e.stopPropagation()//stop's the movement of event
+    // },false)
+    
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     console.log('google clicked')
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    // },false)
+//problem -- if we click on a image the image must delete or dissappered.
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName==='IMG'){
+            console.log(e.target.id);
+            let removeIt=e.target.parentNode
+            // removeIt.remove()
+            removeIt.parentNode.removeChild(removeIt)
+        }
+        
+    },false)
 
 </script>
 </html>
