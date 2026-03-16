@@ -11,6 +11,6 @@ because of issue in blockscope and functional scope.
 // accountId = 2 not allowed
 accountEmail ="adit@gmail.com"
 accountPassword="2345"
-accountCity="Delhi"
+accountCity="Mumbai"
 console.log("accountId")
 console.table([accountEmail,accountId,accountPassword,accountCity,accountState])
