@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee and Code | DOM</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    // create a Element.
+    function addLanuage(langName){
+        const li=document.createElement('li')
+        li.innerHTML=`${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanuage("python")
+    function addoptilanguage(langName){
+        const li=document.createElement('li');
+        const txt=document.createTextNode(langName)//THIS IS A FUNCTION THATS WHY NOT USING THE "" THIS PARAMETERS VALUE PASSS UNERSTAND???.
+        li.appendChild(txt)
+        document.querySelector('.language').appendChild(li)
+    }
+    addoptilanguage("golang")
+    addoptilanguage("java")
+
+    // Edit a Element.
+    const secondLang=document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML="Mojo"
+    const newLi=document.createElement("li")
+    newLi.textContent="Mojo"
+    secondLang.replaceWith(newLi)
+    // way 1-Edit Element
+    // const firstLang=document.querySelector("li:nth-child(1)")
+    // const fli=document.createElement("li")
+    // fli.textContent="Typescript"
+    // firstLang.replaceWith(fli)
+    // way-2 edit element
+    const firstLang=document.querySelector("li:first-child")
+    firstLang.outerHTML='<li>Typescript</li>'
+
+
+    // Remove a Element
+    const lastLang=document.querySelector("li:last-child")
+    lastLang.remove()
+</script> 
+</html>
