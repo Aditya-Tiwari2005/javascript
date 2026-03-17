@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayAditya = function(){
+        console.log("Aditya");
+    }
+    setTimeout(sayAditya,2000)
+
+    // now i want to change the h1 and change in second
+    const changeH1=function(){
+        document.querySelector('h1').innerHTML='Best Student'
+    }
+    const chnageMe = setTimeout(changeH1,2000)
+    //to stop the changeH1 we will use the clearTimeout() but it will not work as it is it wants the reference ,but if we pass the refernce in it then what's the point writing both setTimeout and clearTimeout so we will use event listener when ever we click the button within 2secs the clearTimeout will work and stops the change.
+    document.querySelector('#stop').addEventListener('click',function(e){
+        clearTimeout(chnageMe)
+        console.log("Stopped");
+        
+    })
+</script>
+</html>
