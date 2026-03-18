@@ -27,4 +27,3 @@ const stopChanging=function(){
 
 const startButton = document.querySelector('#start').addEventListener('click',startChanging)
 const stopButton = document.querySelector('#stop').addEventListener('click',stopChanging)
-const body = document.querySelector('#body')
