@@ -1,5 +1,5 @@
-let profile=document.getElementById('profile')
-const button=document.getElementById('Generate')
+let Profile=document.getElementById('profile')
+const Button=document.getElementById('Generate')
 button.addEventListener('click',()=>{
     const requestURl='https://api.github.com/users/Aditya-Tiwari2005'
     const Xhr=new XMLHttpRequest();
