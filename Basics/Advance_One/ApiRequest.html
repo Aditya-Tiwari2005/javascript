@@ -14,8 +14,9 @@
     Xhr.onreadystatechange=function(){
           console.log(Xhr.readyState);
           if (Xhr.readyState === 4) {
-            const data= JSON.parse(this.responseText)
-            console.log(typeof data);//--type of data is string."jab bhi aapke pass response aata hai url se voh string hi aata hai most of the time".
+            // JSON.parse -- this changes the data from string to object
+            const data= JSON.parse(this.responseText)//we are taking about current context thats why we have used (this.)
+            console.log(data);//--type of data is string."jab bhi aapke pass response aata hai url se voh string hi aata hai most of the time".
             console.log(data.followers);
           }
     }
