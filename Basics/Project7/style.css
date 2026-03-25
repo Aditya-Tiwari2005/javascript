@@ -1,0 +1,43 @@
+body{
+    background-color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+  color: burlywood                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
+  text-align: center;  
+  text-decoration-line: underline;
+  text-decoration-color: white;
+}
+#profile{
+  height: 550px;
+  width: 450px;
+  background-color: grey;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+#profile img {
+  margin-bottom: 35px;
+}
+#profile h2{
+  font-size: 40px;
+  margin-top: 5px;
+}
+#profile p{
+  font-size: x-large;
+  margin-bottom: 50px;
+}
+#Generate{
+  background-color: white;
+  height: 45px;
+  width: 135px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 8px;
+}
